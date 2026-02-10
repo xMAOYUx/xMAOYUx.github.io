@@ -1,12 +1,12 @@
 
 /* Minimalist theme: lots of white space, clean typography, subtle accents */
 :root {
-  --bg: #ffffff;
-  --text: #0b0b0b;
-  --muted: #6b7280;
+  --bg: #f4f1ee;
+  --text: #3a3335;
+  --muted: #726f72;
   --primary: #111111; /* minimalist: neutral/black accent */
-  --card: #fafafa;
-  --border: #eaeaea;
+  --card: #faf7f4;
+  --border: #dfd9d3;
 }
 [data-theme="dark"] {
   --bg: #0e0e10;
