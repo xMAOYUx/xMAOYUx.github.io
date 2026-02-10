@@ -19,20 +19,28 @@ h2 { font-size: var(--h2-size); line-height: 1.2; }
 h3 { font-size: var(--h3-size); line-height: 1.3; }
 /* Minimalist theme: lots of white space, clean typography, subtle accents */
 :root {
-  --bg: #f4f1ee;
-  --text: #3a3335;
-  --muted: #726f72;
-  --primary: #111111; /* minimalist: neutral/black accent */
-  --card: #faf7f4;
-  --border: #dfd9d3;
+  /* Cool Leather Gray Theme (Light) */
+  --bg: #f2f1ef;            /* 冷淡灰米白：背景 */
+  --text: #3b3a38;          /* 冷皮革深灰：正文文字 */
+  --muted: #7c7a77;         /* 冷褐灰：次要提示文字 */
+  --primary: #5f5c59;       /* 冷皮革棕灰：强调色 */
+  --card: #f6f5f3;          /* 浅灰米白卡片背景 */
+  --border: #dcd9d5;        /* 冷淡浅灰边框 */
+
+  /* Layout / Typography */
+  --container-max: 1180px;
+  --h1-size: clamp(42px, 8vw, 72px);
+  --h2-size: clamp(28px, 5vw, 42px);
+  --h3-size: clamp(20px, 3vw, 26px);
 }
 [data-theme="dark"] {
-  --bg: #0e0e10;
-  --text: #ededed;
-  --muted: #a1a1aa;
-  --primary: #ededed;
-  --card: #141417;
-  --border: #26262b;
+  /* Cool Leather Gray Theme (Dark) */
+  --bg: #2d2c2a;            /* 深皮革灰黑背景 */
+  --text: #e8e6e3;          /* 温柔偏暖的米白文字（避免太冷） */
+  --muted: #b8b5b2;         /* 低对比度提示 */
+  --primary: #c0bab4;       /* 冷褐灰强调色 */
+  --card: #35322f;          /* 冷黑灰的卡片色 */
+  --border: #4a4641;        /* 深灰褐边界 */
 }
 * { box-sizing: border-box; }
 html, body { height: 100%; }
