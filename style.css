@@ -195,22 +195,28 @@ a { color: var(--primary); text-decoration: none; }
   display: block;
 }
 
-/* 图片上方的文字遮罩层 */
+/* 图片上方的文字遮罩层 - 唯一正确版本 */
 .banner-overlay {
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(0, 0, 0, 0.4);
+  background: rgba(0, 0, 0, 0.35);  /* 半透明深色，白字清晰可见 */
   display: flex;
   align-items: center;
   justify-content: center;
+  z-index: 2;                       /* 确保在图片上方 */
+  pointer-events: none;            /* 点击穿透，不遮挡下方按钮 */
 }
 
 .banner-text {
   text-align: center;
   color: white;
+  position: relative;
+  z-index: 3;
+  max-width: 800px;
+  padding: 0 20px;
 }
 
 .banner-text h2 {
@@ -218,18 +224,25 @@ a { color: var(--primary); text-decoration: none; }
   font-family: 'Playfair Display', serif;
   font-weight: 700;
   margin: 0 0 10px 0;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+  color: white;
+  letter-spacing: 0.5px;
 }
 
 .banner-text p {
   font-size: 1.2rem;
   margin: 0;
   font-weight: 300;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.4);
+  color: white;
+  opacity: 0.95;
 }
 
 /* 响应式 */
 @media (max-width: 768px) {
   .hero-banner {
     height: 300px;
+    margin-bottom: 40px;
   }
 
   .banner-text h2 {
